@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship Program Message Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #3e0c4b;
+            /* Set background color to purple */
+            color: #075055;
+            /* Set text color to teal */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #085550;
+            /* Set border color to teal */
+            border-radius: 5px;
+            background-color: #a3cacd;
+            /* Set container background color to light yellow */
+        }
+
+        .containerSplit {
+            display: flex;
+            max-width: 1000px;
+            margin: 50px auto;
+            justify-content: space-around;
+            padding: 40px;
+            border: 1px solid #085550;
+            /* Set border color to teal */
+            border-radius: 5px;
+            background-color: #a3cacd;
+            /* Set container background color to light yellow */
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: #e4f1fe;
+            /* Set textarea background color to light blue */
+            border: 1px solid #065157;
+            /* Set textarea border color to teal */
+            color: #75485e;
+            /* Set textarea text color to purple */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #00a3af;
+            /* Set button background color to teal */
+            color: #fffbdf;
+            /* Set button text color to light yellow */
+            border: none;
+        }
+
+        button:hover {
+            background-color: #093d52;
+        }
+
+        .output {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #e4f1fe;
+            /* Set textarea background color to light blue */
+            border: 1px solid #065157;
+            /* Set textarea border color to teal */
+            color: #75485e;
+            /* Set textarea text color to purple */
+        }
+
+        #copyButton:disabled {
+            background-color: lightgrey;
+            /* Change the background color to light grey */
+            color: #666;
+            /* Keep the text color */
+            cursor: not-allowed;
+            /* Keep the cursor */
+        }
+
+        #copyIntroButton:disabled {
+            background-color: lightgrey;
+            /* Change the background color to light grey */
+            color: #666;
+            /* Keep the text color */
+            cursor: not-allowed;
+            /* Keep the cursor */
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <center>Mentorship Program Message Generator</center>
+        </h1>
+        <h4>Copy/Paste Mentee App here:</h4>
+        <textarea id="inputText" placeholder="Enter your text here..."></textarea> <br>
+        <h4>What type of mentor is needed:</h4>
+        <textarea style="height: 20px" id="typeOfMentor"
+            placeholder="New To Raiding, CE, HoF, RWF, or Mythic Plus"></textarea>
+        <center>
+            <button onclick="generateMessages()">Generate Messages</button>
+        </center>
+    </div>
+
+    <div class="containerSplit">
+        <div class="column">
+            <h2>LF Mentor Post</h2>
+            <button id="copyButton" disabled>Copy
+                Text</button>
+            <h4>Copy/Paste the following text to create the LF Mentor Thread.</h4>
+            <div class="output" id="outputMessage"></div>
+        </div>
+        <div class="column">
+            <h2>Intro Post</h2>
+            <button id="copyIntroButton" disabled>Copy
+                Text</button>
+            <h4>Copy/Paste the following text to create the Mentorship Intro once matched.</h4>
+            <i>You can find the Mentor's information in the <a
+                href="https://docs.google.com/spreadsheets/d/1-cHE2KmVRX8JKM-8xRfdVOT5_rqHyGMWYmp1TXkc3Us/edit#gid=1860473139">directory</a>.
+            Fill in details accordingly.</i>
+            <div class="output" id="introMessage"></div>
+
+        </div>
+    </div>
+
+    <script src="copy.js"></script>
+
+    <script src="main.js">
+
+    </script>
+</body>
+
+</html>
